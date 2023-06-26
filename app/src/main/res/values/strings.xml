@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MapPlan</string>
+    <string name="register">Register</string>
+    <string name="email_user">Email User</string>
+    <string name="username_or_email">UserName or Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">confirm Password</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="i_have_an_account">I have an account</string>
+    <string name="login">Login</string>
+    <string name="register_for_new_account">Register for new account</string>
+
+
+</resources>

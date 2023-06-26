@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">خطة الطريق</string>
+    <string name="register">التسجيل</string>
+    <string name="email_user">إيميل المستخدم</string>
+    <string name="username_or_email">اسم المستخدم أو الايميل</string>
+    <string name="password">الرمز</string>
+    <string name="confirm_password">معيانة الرمز</string>
+    <string name="enter_your_password">ادخل الرمز الخاص فيك</string>
+    <string name="i_have_an_account">لدي حساب </string>
+    <string name="login">الدخول</string>
+    <string name="register_for_new_account">حساب جديد</string>
+</resources>
