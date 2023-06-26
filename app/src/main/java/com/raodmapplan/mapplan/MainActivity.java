@@ -1,42 +1,34 @@
 package com.raodmapplan.mapplan;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private TextView TextView_Main_UserID, TextView_Main_UserPassword;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // go to the next page login
-        // A counter 3000 second
-                final android.os.Handler handler = new android.os.Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(MainActivity.this, LoginPage.class);
-                        startActivity(intent);
-                    }
-                }, 3000);
+        TextView_Main_UserID = findViewById(R.id.TextView_Main_UserID);
+        TextView_Main_UserPassword = findViewById(R.id.TextView_Main_UserPassword);
+
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("userID");
+        String userPassword = intent.getStringExtra("userPassword");
+
+        TextView_Main_UserID.setText(userID);
+        TextView_Main_UserPassword.setText(userPassword);
 
 
 
-
-    }// End of onCreate method
-
+    }//  End of onCreate method
 
 
 
-
-
-
-
-
-
-
-}// End of MainActivity class
+}//  End of MainActivity class
