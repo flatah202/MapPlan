@@ -31,16 +31,13 @@ public class LoginActivity extends AppCompatActivity {
         TextInputEditText_ID = findViewById(R.id.TextInputEditText_ID);
         TextInputEditText_Password = findViewById(R.id.TextInputEditText_Password);
         RelativeLayout_Login = findViewById(R.id.RelativeLayout_Login);
-        RelativeLayout_LoginGoogle = findViewById(R.id.RelativeLayout_LoginGoogle);
-        Button_SignUp = findViewById(R.id.Button_SignUp);
-        Button_FindPassword = findViewById(R.id.Button_FindPassword);
 
 
         //GO to signUp or RegisterActivity page
         Button_SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, HomePage.class);
                 startActivity(intent);
             }
         });

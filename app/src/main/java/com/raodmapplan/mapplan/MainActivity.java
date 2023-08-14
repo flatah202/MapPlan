@@ -1,29 +1,32 @@
 package com.raodmapplan.mapplan;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView TextView_Main_UserID, TextView_Main_UserPassword;
-    
+    private Button GO;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView_Main_UserID = findViewById(R.id.TextView_Main_UserID);
-        TextView_Main_UserPassword = findViewById(R.id.TextView_Main_UserPassword);
 
-        Intent intent = getIntent();
-        String userID = intent.getStringExtra("userID");
-        String userPassword = intent.getStringExtra("userPassword");
+        GO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        TextView_Main_UserID.setText(userID);
-        TextView_Main_UserPassword.setText(userPassword);
 
 
 
